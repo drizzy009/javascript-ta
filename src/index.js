@@ -1,9 +1,17 @@
 // complete the function
-function prime (num) {
+function prime(num) {
   // code goes here
+  var prime = num != 1;
+  for (var i = 2; i < num; i++) {
+    if (num % i == 0) {
+      prime = false;
+      break;
+    }
+  }
+  return prime;
 }
 
-function solution (arg) {
+function solution(arg) {
   return prime(arg);
 }
 
